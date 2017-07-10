@@ -7,20 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		EACB7F591F137A32003EB673 /* generatePointCloud.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EACB7F581F137A32003EB673 /* generatePointCloud.cpp */; };
-		EACB7F6D1F137B2E003EB673 /* liblibjasper.a in Frameworks */ = {isa = PBXBuildFile; fileRef = EACB7F601F137B2E003EB673 /* liblibjasper.a */; };
-		EACB7F6E1F137B2E003EB673 /* liblibjpeg.a in Frameworks */ = {isa = PBXBuildFile; fileRef = EACB7F611F137B2E003EB673 /* liblibjpeg.a */; };
-		EACB7F6F1F137B2E003EB673 /* liblibpng.a in Frameworks */ = {isa = PBXBuildFile; fileRef = EACB7F621F137B2E003EB673 /* liblibpng.a */; };
-		EACB7F701F137B2E003EB673 /* liblibtiff.a in Frameworks */ = {isa = PBXBuildFile; fileRef = EACB7F631F137B2E003EB673 /* liblibtiff.a */; };
-		EACB7F711F137B2E003EB673 /* libopencv_calib3d.a in Frameworks */ = {isa = PBXBuildFile; fileRef = EACB7F641F137B2E003EB673 /* libopencv_calib3d.a */; };
-		EACB7F721F137B2E003EB673 /* libopencv_core.a in Frameworks */ = {isa = PBXBuildFile; fileRef = EACB7F651F137B2E003EB673 /* libopencv_core.a */; };
-		EACB7F731F137B2E003EB673 /* libopencv_features2d.a in Frameworks */ = {isa = PBXBuildFile; fileRef = EACB7F661F137B2E003EB673 /* libopencv_features2d.a */; };
-		EACB7F741F137B2E003EB673 /* libopencv_flann.a in Frameworks */ = {isa = PBXBuildFile; fileRef = EACB7F671F137B2E003EB673 /* libopencv_flann.a */; };
-		EACB7F751F137B2E003EB673 /* libopencv_highgui.a in Frameworks */ = {isa = PBXBuildFile; fileRef = EACB7F681F137B2E003EB673 /* libopencv_highgui.a */; };
-		EACB7F761F137B2E003EB673 /* libopencv_imgcodecs.a in Frameworks */ = {isa = PBXBuildFile; fileRef = EACB7F691F137B2E003EB673 /* libopencv_imgcodecs.a */; };
-		EACB7F771F137B2E003EB673 /* libopencv_imgproc.a in Frameworks */ = {isa = PBXBuildFile; fileRef = EACB7F6A1F137B2E003EB673 /* libopencv_imgproc.a */; };
-		EACB7F781F137B2E003EB673 /* libwebp.a in Frameworks */ = {isa = PBXBuildFile; fileRef = EACB7F6B1F137B2E003EB673 /* libwebp.a */; };
-		EACB7F791F137B2E003EB673 /* libzlib.a in Frameworks */ = {isa = PBXBuildFile; fileRef = EACB7F6C1F137B2E003EB673 /* libzlib.a */; };
+		EACB7F591F137A32003EB673 /* joinPointCloud.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EACB7F581F137A32003EB673 /* joinPointCloud.cpp */; };
 		EACB7F921F137BCC003EB673 /* libpcl_2d.1.8.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = EACB7F7A1F137BCC003EB673 /* libpcl_2d.1.8.0.dylib */; };
 		EACB7F931F137BCC003EB673 /* libpcl_apps.1.8.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = EACB7F7B1F137BCC003EB673 /* libpcl_apps.1.8.0.dylib */; };
 		EACB7F941F137BCC003EB673 /* libpcl_common.1.8.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = EACB7F7C1F137BCC003EB673 /* libpcl_common.1.8.0.dylib */; };
@@ -48,6 +35,18 @@
 		EACB7FAB1F137D39003EB673 /* libboost_system.a in Frameworks */ = {isa = PBXBuildFile; fileRef = EACB7FAA1F137D39003EB673 /* libboost_system.a */; };
 		EACB7FAD1F137EFC003EB673 /* libopenblas_haswellp-r0.2.20.dev.a in Frameworks */ = {isa = PBXBuildFile; fileRef = EACB7FAC1F137EFC003EB673 /* libopenblas_haswellp-r0.2.20.dev.a */; };
 		EACB7FB01F13809A003EB673 /* slamBase.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EACB7FAE1F13809A003EB673 /* slamBase.cpp */; };
+		EACB7FB81F13855D003EB673 /* libopencv_calib3d.3.2.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = EACB7FB11F13855D003EB673 /* libopencv_calib3d.3.2.0.dylib */; };
+		EACB7FB91F13855D003EB673 /* libopencv_core.3.2.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = EACB7FB21F13855D003EB673 /* libopencv_core.3.2.0.dylib */; };
+		EACB7FBA1F13855D003EB673 /* libopencv_features2d.3.2.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = EACB7FB31F13855D003EB673 /* libopencv_features2d.3.2.0.dylib */; };
+		EACB7FBB1F13855D003EB673 /* libopencv_flann.3.2.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = EACB7FB41F13855D003EB673 /* libopencv_flann.3.2.0.dylib */; };
+		EACB7FBC1F13855D003EB673 /* libopencv_highgui.3.2.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = EACB7FB51F13855D003EB673 /* libopencv_highgui.3.2.0.dylib */; };
+		EACB7FBD1F13855D003EB673 /* libopencv_imgcodecs.3.2.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = EACB7FB61F13855D003EB673 /* libopencv_imgcodecs.3.2.0.dylib */; };
+		EACB7FBE1F13855D003EB673 /* libopencv_imgproc.3.2.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = EACB7FB71F13855D003EB673 /* libopencv_imgproc.3.2.0.dylib */; };
+		EACB7FC01F138CE2003EB673 /* libvtkCommonCore-7.1.1.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = EACB7FBF1F138CE2003EB673 /* libvtkCommonCore-7.1.1.dylib */; };
+		EACB7FC21F139087003EB673 /* libboost_signals-mt.a in Frameworks */ = {isa = PBXBuildFile; fileRef = EACB7FC11F139087003EB673 /* libboost_signals-mt.a */; };
+		EACB7FC41F1390E6003EB673 /* libboost_thread-mt.a in Frameworks */ = {isa = PBXBuildFile; fileRef = EACB7FC31F1390E6003EB673 /* libboost_thread-mt.a */; };
+		EACB7FC61F1392D0003EB673 /* libvtkViewsCore-7.1.1.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = EACB7FC51F1392D0003EB673 /* libvtkViewsCore-7.1.1.dylib */; };
+		EACB7FC81F1392FA003EB673 /* libvtkRenderingCore-7.1.1.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = EACB7FC71F1392FA003EB673 /* libvtkRenderingCore-7.1.1.dylib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -64,7 +63,7 @@
 
 /* Begin PBXFileReference section */
 		EACB7F551F137A32003EB673 /* rgb-slam */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "rgb-slam"; sourceTree = BUILT_PRODUCTS_DIR; };
-		EACB7F581F137A32003EB673 /* generatePointCloud.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = generatePointCloud.cpp; sourceTree = "<group>"; };
+		EACB7F581F137A32003EB673 /* joinPointCloud.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = joinPointCloud.cpp; sourceTree = "<group>"; };
 		EACB7F601F137B2E003EB673 /* liblibjasper.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = liblibjasper.a; path = "../../../3rd/opencv-3.2/lib/liblibjasper.a"; sourceTree = "<group>"; };
 		EACB7F611F137B2E003EB673 /* liblibjpeg.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = liblibjpeg.a; path = "../../../3rd/opencv-3.2/lib/liblibjpeg.a"; sourceTree = "<group>"; };
 		EACB7F621F137B2E003EB673 /* liblibpng.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = liblibpng.a; path = "../../../3rd/opencv-3.2/lib/liblibpng.a"; sourceTree = "<group>"; };
@@ -106,6 +105,18 @@
 		EACB7FAC1F137EFC003EB673 /* libopenblas_haswellp-r0.2.20.dev.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = "libopenblas_haswellp-r0.2.20.dev.a"; path = "../../../../../opt/OpenBLAS/lib/libopenblas_haswellp-r0.2.20.dev.a"; sourceTree = "<group>"; };
 		EACB7FAE1F13809A003EB673 /* slamBase.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = slamBase.cpp; sourceTree = "<group>"; };
 		EACB7FAF1F13809A003EB673 /* slamBase.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = slamBase.hpp; sourceTree = "<group>"; };
+		EACB7FB11F13855D003EB673 /* libopencv_calib3d.3.2.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libopencv_calib3d.3.2.0.dylib; path = ../../../../../usr/local/Cellar/opencv3/3.2.0/lib/libopencv_calib3d.3.2.0.dylib; sourceTree = "<group>"; };
+		EACB7FB21F13855D003EB673 /* libopencv_core.3.2.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libopencv_core.3.2.0.dylib; path = ../../../../../usr/local/Cellar/opencv3/3.2.0/lib/libopencv_core.3.2.0.dylib; sourceTree = "<group>"; };
+		EACB7FB31F13855D003EB673 /* libopencv_features2d.3.2.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libopencv_features2d.3.2.0.dylib; path = ../../../../../usr/local/Cellar/opencv3/3.2.0/lib/libopencv_features2d.3.2.0.dylib; sourceTree = "<group>"; };
+		EACB7FB41F13855D003EB673 /* libopencv_flann.3.2.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libopencv_flann.3.2.0.dylib; path = ../../../../../usr/local/Cellar/opencv3/3.2.0/lib/libopencv_flann.3.2.0.dylib; sourceTree = "<group>"; };
+		EACB7FB51F13855D003EB673 /* libopencv_highgui.3.2.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libopencv_highgui.3.2.0.dylib; path = ../../../../../usr/local/Cellar/opencv3/3.2.0/lib/libopencv_highgui.3.2.0.dylib; sourceTree = "<group>"; };
+		EACB7FB61F13855D003EB673 /* libopencv_imgcodecs.3.2.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libopencv_imgcodecs.3.2.0.dylib; path = ../../../../../usr/local/Cellar/opencv3/3.2.0/lib/libopencv_imgcodecs.3.2.0.dylib; sourceTree = "<group>"; };
+		EACB7FB71F13855D003EB673 /* libopencv_imgproc.3.2.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libopencv_imgproc.3.2.0.dylib; path = ../../../../../usr/local/Cellar/opencv3/3.2.0/lib/libopencv_imgproc.3.2.0.dylib; sourceTree = "<group>"; };
+		EACB7FBF1F138CE2003EB673 /* libvtkCommonCore-7.1.1.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libvtkCommonCore-7.1.1.dylib"; path = "../../../../../usr/local/Cellar/vtk/7.1.1_1/lib/libvtkCommonCore-7.1.1.dylib"; sourceTree = "<group>"; };
+		EACB7FC11F139087003EB673 /* libboost_signals-mt.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = "libboost_signals-mt.a"; path = "../../../../../usr/local/Cellar/boost/1.64.0_1/lib/libboost_signals-mt.a"; sourceTree = "<group>"; };
+		EACB7FC31F1390E6003EB673 /* libboost_thread-mt.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = "libboost_thread-mt.a"; path = "../../../../../usr/local/Cellar/boost/1.64.0_1/lib/libboost_thread-mt.a"; sourceTree = "<group>"; };
+		EACB7FC51F1392D0003EB673 /* libvtkViewsCore-7.1.1.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libvtkViewsCore-7.1.1.dylib"; path = "../../../../../usr/local/Cellar/vtk/7.1.1_1/lib/libvtkViewsCore-7.1.1.dylib"; sourceTree = "<group>"; };
+		EACB7FC71F1392FA003EB673 /* libvtkRenderingCore-7.1.1.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libvtkRenderingCore-7.1.1.dylib"; path = "../../../../../usr/local/Cellar/vtk/7.1.1_1/lib/libvtkRenderingCore-7.1.1.dylib"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -113,6 +124,19 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EACB7FC81F1392FA003EB673 /* libvtkRenderingCore-7.1.1.dylib in Frameworks */,
+				EACB7FC61F1392D0003EB673 /* libvtkViewsCore-7.1.1.dylib in Frameworks */,
+				EACB7FC41F1390E6003EB673 /* libboost_thread-mt.a in Frameworks */,
+				EACB7FA91F137BCC003EB673 /* libpcl_visualization.1.8.0.dylib in Frameworks */,
+				EACB7FC21F139087003EB673 /* libboost_signals-mt.a in Frameworks */,
+				EACB7FC01F138CE2003EB673 /* libvtkCommonCore-7.1.1.dylib in Frameworks */,
+				EACB7FB81F13855D003EB673 /* libopencv_calib3d.3.2.0.dylib in Frameworks */,
+				EACB7FB91F13855D003EB673 /* libopencv_core.3.2.0.dylib in Frameworks */,
+				EACB7FBA1F13855D003EB673 /* libopencv_features2d.3.2.0.dylib in Frameworks */,
+				EACB7FBB1F13855D003EB673 /* libopencv_flann.3.2.0.dylib in Frameworks */,
+				EACB7FBC1F13855D003EB673 /* libopencv_highgui.3.2.0.dylib in Frameworks */,
+				EACB7FBD1F13855D003EB673 /* libopencv_imgcodecs.3.2.0.dylib in Frameworks */,
+				EACB7FBE1F13855D003EB673 /* libopencv_imgproc.3.2.0.dylib in Frameworks */,
 				EACB7FAD1F137EFC003EB673 /* libopenblas_haswellp-r0.2.20.dev.a in Frameworks */,
 				EACB7FAB1F137D39003EB673 /* libboost_system.a in Frameworks */,
 				EACB7F921F137BCC003EB673 /* libpcl_2d.1.8.0.dylib in Frameworks */,
@@ -138,20 +162,6 @@
 				EACB7FA61F137BCC003EB673 /* libpcl_stereo.1.8.0.dylib in Frameworks */,
 				EACB7FA71F137BCC003EB673 /* libpcl_surface.1.8.0.dylib in Frameworks */,
 				EACB7FA81F137BCC003EB673 /* libpcl_tracking.1.8.0.dylib in Frameworks */,
-				EACB7FA91F137BCC003EB673 /* libpcl_visualization.1.8.0.dylib in Frameworks */,
-				EACB7F6D1F137B2E003EB673 /* liblibjasper.a in Frameworks */,
-				EACB7F6E1F137B2E003EB673 /* liblibjpeg.a in Frameworks */,
-				EACB7F6F1F137B2E003EB673 /* liblibpng.a in Frameworks */,
-				EACB7F701F137B2E003EB673 /* liblibtiff.a in Frameworks */,
-				EACB7F711F137B2E003EB673 /* libopencv_calib3d.a in Frameworks */,
-				EACB7F721F137B2E003EB673 /* libopencv_core.a in Frameworks */,
-				EACB7F731F137B2E003EB673 /* libopencv_features2d.a in Frameworks */,
-				EACB7F741F137B2E003EB673 /* libopencv_flann.a in Frameworks */,
-				EACB7F751F137B2E003EB673 /* libopencv_highgui.a in Frameworks */,
-				EACB7F761F137B2E003EB673 /* libopencv_imgcodecs.a in Frameworks */,
-				EACB7F771F137B2E003EB673 /* libopencv_imgproc.a in Frameworks */,
-				EACB7F781F137B2E003EB673 /* libwebp.a in Frameworks */,
-				EACB7F791F137B2E003EB673 /* libzlib.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -178,7 +188,7 @@
 		EACB7F571F137A32003EB673 /* rgb-slam */ = {
 			isa = PBXGroup;
 			children = (
-				EACB7F581F137A32003EB673 /* generatePointCloud.cpp */,
+				EACB7F581F137A32003EB673 /* joinPointCloud.cpp */,
 				EACB7FAE1F13809A003EB673 /* slamBase.cpp */,
 				EACB7FAF1F13809A003EB673 /* slamBase.hpp */,
 			);
@@ -188,6 +198,18 @@
 		EACB7F5F1F137B2E003EB673 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				EACB7FC71F1392FA003EB673 /* libvtkRenderingCore-7.1.1.dylib */,
+				EACB7FC51F1392D0003EB673 /* libvtkViewsCore-7.1.1.dylib */,
+				EACB7FC31F1390E6003EB673 /* libboost_thread-mt.a */,
+				EACB7FC11F139087003EB673 /* libboost_signals-mt.a */,
+				EACB7FBF1F138CE2003EB673 /* libvtkCommonCore-7.1.1.dylib */,
+				EACB7FB11F13855D003EB673 /* libopencv_calib3d.3.2.0.dylib */,
+				EACB7FB21F13855D003EB673 /* libopencv_core.3.2.0.dylib */,
+				EACB7FB31F13855D003EB673 /* libopencv_features2d.3.2.0.dylib */,
+				EACB7FB41F13855D003EB673 /* libopencv_flann.3.2.0.dylib */,
+				EACB7FB51F13855D003EB673 /* libopencv_highgui.3.2.0.dylib */,
+				EACB7FB61F13855D003EB673 /* libopencv_imgcodecs.3.2.0.dylib */,
+				EACB7FB71F13855D003EB673 /* libopencv_imgproc.3.2.0.dylib */,
 				EACB7FAC1F137EFC003EB673 /* libopenblas_haswellp-r0.2.20.dev.a */,
 				EACB7FAA1F137D39003EB673 /* libboost_system.a */,
 				EACB7F7A1F137BCC003EB673 /* libpcl_2d.1.8.0.dylib */,
@@ -289,7 +311,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EACB7F591F137A32003EB673 /* generatePointCloud.cpp in Sources */,
+				EACB7F591F137A32003EB673 /* joinPointCloud.cpp in Sources */,
 				EACB7FB01F13809A003EB673 /* slamBase.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -391,16 +413,18 @@
 			buildSettings = {
 				DEVELOPMENT_TEAM = 99BH65ZR59;
 				HEADER_SEARCH_PATHS = (
-					"/Users/sofiawu/3rd/opencv-3.2/include",
+					/usr/local/Cellar/opencv3/3.2.0/include,
 					"/usr/local/opt/pcl/include/pcl-1.8/",
 					/usr/local/opt/eigen/include/eigen3,
 					/usr/local/opt/boost/include,
+					"/usr/local/opt/vtk/include/vtk-7.1",
 				);
 				LIBRARY_SEARCH_PATHS = (
-					"/Users/sofiawu/3rd/opencv-3.2/lib",
 					/usr/local/Cellar/pcl/1.8.0_7/lib,
 					/usr/local/Cellar/boost/1.64.0_1/lib,
 					/opt/OpenBLAS/lib,
+					/usr/local/Cellar/opencv3/3.2.0/lib,
+					/usr/local/Cellar/vtk/7.1.1_1/lib,
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -411,16 +435,18 @@
 			buildSettings = {
 				DEVELOPMENT_TEAM = 99BH65ZR59;
 				HEADER_SEARCH_PATHS = (
-					"/Users/sofiawu/3rd/opencv-3.2/include",
+					/usr/local/Cellar/opencv3/3.2.0/include,
 					"/usr/local/opt/pcl/include/pcl-1.8/",
 					/usr/local/opt/eigen/include/eigen3,
 					/usr/local/opt/boost/include,
+					"/usr/local/opt/vtk/include/vtk-7.1",
 				);
 				LIBRARY_SEARCH_PATHS = (
-					"/Users/sofiawu/3rd/opencv-3.2/lib",
 					/usr/local/Cellar/pcl/1.8.0_7/lib,
 					/usr/local/Cellar/boost/1.64.0_1/lib,
 					/opt/OpenBLAS/lib,
+					/usr/local/Cellar/opencv3/3.2.0/lib,
+					/usr/local/Cellar/vtk/7.1.1_1/lib,
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
