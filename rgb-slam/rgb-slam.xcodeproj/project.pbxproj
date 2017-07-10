@@ -1,0 +1,452 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		EACB7F591F137A32003EB673 /* generatePointCloud.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EACB7F581F137A32003EB673 /* generatePointCloud.cpp */; };
+		EACB7F6D1F137B2E003EB673 /* liblibjasper.a in Frameworks */ = {isa = PBXBuildFile; fileRef = EACB7F601F137B2E003EB673 /* liblibjasper.a */; };
+		EACB7F6E1F137B2E003EB673 /* liblibjpeg.a in Frameworks */ = {isa = PBXBuildFile; fileRef = EACB7F611F137B2E003EB673 /* liblibjpeg.a */; };
+		EACB7F6F1F137B2E003EB673 /* liblibpng.a in Frameworks */ = {isa = PBXBuildFile; fileRef = EACB7F621F137B2E003EB673 /* liblibpng.a */; };
+		EACB7F701F137B2E003EB673 /* liblibtiff.a in Frameworks */ = {isa = PBXBuildFile; fileRef = EACB7F631F137B2E003EB673 /* liblibtiff.a */; };
+		EACB7F711F137B2E003EB673 /* libopencv_calib3d.a in Frameworks */ = {isa = PBXBuildFile; fileRef = EACB7F641F137B2E003EB673 /* libopencv_calib3d.a */; };
+		EACB7F721F137B2E003EB673 /* libopencv_core.a in Frameworks */ = {isa = PBXBuildFile; fileRef = EACB7F651F137B2E003EB673 /* libopencv_core.a */; };
+		EACB7F731F137B2E003EB673 /* libopencv_features2d.a in Frameworks */ = {isa = PBXBuildFile; fileRef = EACB7F661F137B2E003EB673 /* libopencv_features2d.a */; };
+		EACB7F741F137B2E003EB673 /* libopencv_flann.a in Frameworks */ = {isa = PBXBuildFile; fileRef = EACB7F671F137B2E003EB673 /* libopencv_flann.a */; };
+		EACB7F751F137B2E003EB673 /* libopencv_highgui.a in Frameworks */ = {isa = PBXBuildFile; fileRef = EACB7F681F137B2E003EB673 /* libopencv_highgui.a */; };
+		EACB7F761F137B2E003EB673 /* libopencv_imgcodecs.a in Frameworks */ = {isa = PBXBuildFile; fileRef = EACB7F691F137B2E003EB673 /* libopencv_imgcodecs.a */; };
+		EACB7F771F137B2E003EB673 /* libopencv_imgproc.a in Frameworks */ = {isa = PBXBuildFile; fileRef = EACB7F6A1F137B2E003EB673 /* libopencv_imgproc.a */; };
+		EACB7F781F137B2E003EB673 /* libwebp.a in Frameworks */ = {isa = PBXBuildFile; fileRef = EACB7F6B1F137B2E003EB673 /* libwebp.a */; };
+		EACB7F791F137B2E003EB673 /* libzlib.a in Frameworks */ = {isa = PBXBuildFile; fileRef = EACB7F6C1F137B2E003EB673 /* libzlib.a */; };
+		EACB7F921F137BCC003EB673 /* libpcl_2d.1.8.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = EACB7F7A1F137BCC003EB673 /* libpcl_2d.1.8.0.dylib */; };
+		EACB7F931F137BCC003EB673 /* libpcl_apps.1.8.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = EACB7F7B1F137BCC003EB673 /* libpcl_apps.1.8.0.dylib */; };
+		EACB7F941F137BCC003EB673 /* libpcl_common.1.8.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = EACB7F7C1F137BCC003EB673 /* libpcl_common.1.8.0.dylib */; };
+		EACB7F951F137BCC003EB673 /* libpcl_features.1.8.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = EACB7F7D1F137BCC003EB673 /* libpcl_features.1.8.0.dylib */; };
+		EACB7F961F137BCC003EB673 /* libpcl_filters.1.8.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = EACB7F7E1F137BCC003EB673 /* libpcl_filters.1.8.0.dylib */; };
+		EACB7F971F137BCC003EB673 /* libpcl_io_ply.1.8.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = EACB7F7F1F137BCC003EB673 /* libpcl_io_ply.1.8.0.dylib */; };
+		EACB7F981F137BCC003EB673 /* libpcl_io.1.8.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = EACB7F801F137BCC003EB673 /* libpcl_io.1.8.0.dylib */; };
+		EACB7F991F137BCC003EB673 /* libpcl_kdtree.1.8.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = EACB7F811F137BCC003EB673 /* libpcl_kdtree.1.8.0.dylib */; };
+		EACB7F9A1F137BCC003EB673 /* libpcl_keypoints.1.8.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = EACB7F821F137BCC003EB673 /* libpcl_keypoints.1.8.0.dylib */; };
+		EACB7F9B1F137BCC003EB673 /* libpcl_ml.1.8.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = EACB7F831F137BCC003EB673 /* libpcl_ml.1.8.0.dylib */; };
+		EACB7F9C1F137BCC003EB673 /* libpcl_octree.1.8.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = EACB7F841F137BCC003EB673 /* libpcl_octree.1.8.0.dylib */; };
+		EACB7F9D1F137BCC003EB673 /* libpcl_outofcore.1.8.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = EACB7F851F137BCC003EB673 /* libpcl_outofcore.1.8.0.dylib */; };
+		EACB7F9E1F137BCC003EB673 /* libpcl_people.1.8.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = EACB7F861F137BCC003EB673 /* libpcl_people.1.8.0.dylib */; };
+		EACB7F9F1F137BCC003EB673 /* libpcl_recognition.1.8.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = EACB7F871F137BCC003EB673 /* libpcl_recognition.1.8.0.dylib */; };
+		EACB7FA01F137BCC003EB673 /* libpcl_registration.1.8.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = EACB7F881F137BCC003EB673 /* libpcl_registration.1.8.0.dylib */; };
+		EACB7FA11F137BCC003EB673 /* libpcl_sample_consensus.1.8.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = EACB7F891F137BCC003EB673 /* libpcl_sample_consensus.1.8.0.dylib */; };
+		EACB7FA21F137BCC003EB673 /* libpcl_search.1.8.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = EACB7F8A1F137BCC003EB673 /* libpcl_search.1.8.0.dylib */; };
+		EACB7FA31F137BCC003EB673 /* libpcl_segmentation.1.8.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = EACB7F8B1F137BCC003EB673 /* libpcl_segmentation.1.8.0.dylib */; };
+		EACB7FA41F137BCC003EB673 /* libpcl_simulation_io.1.8.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = EACB7F8C1F137BCC003EB673 /* libpcl_simulation_io.1.8.0.dylib */; };
+		EACB7FA51F137BCC003EB673 /* libpcl_simulation.1.8.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = EACB7F8D1F137BCC003EB673 /* libpcl_simulation.1.8.0.dylib */; };
+		EACB7FA61F137BCC003EB673 /* libpcl_stereo.1.8.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = EACB7F8E1F137BCC003EB673 /* libpcl_stereo.1.8.0.dylib */; };
+		EACB7FA71F137BCC003EB673 /* libpcl_surface.1.8.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = EACB7F8F1F137BCC003EB673 /* libpcl_surface.1.8.0.dylib */; };
+		EACB7FA81F137BCC003EB673 /* libpcl_tracking.1.8.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = EACB7F901F137BCC003EB673 /* libpcl_tracking.1.8.0.dylib */; };
+		EACB7FA91F137BCC003EB673 /* libpcl_visualization.1.8.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = EACB7F911F137BCC003EB673 /* libpcl_visualization.1.8.0.dylib */; };
+		EACB7FAB1F137D39003EB673 /* libboost_system.a in Frameworks */ = {isa = PBXBuildFile; fileRef = EACB7FAA1F137D39003EB673 /* libboost_system.a */; };
+		EACB7FAD1F137EFC003EB673 /* libopenblas_haswellp-r0.2.20.dev.a in Frameworks */ = {isa = PBXBuildFile; fileRef = EACB7FAC1F137EFC003EB673 /* libopenblas_haswellp-r0.2.20.dev.a */; };
+		EACB7FB01F13809A003EB673 /* slamBase.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EACB7FAE1F13809A003EB673 /* slamBase.cpp */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		EACB7F531F137A32003EB673 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = /usr/share/man/man1/;
+			dstSubfolderSpec = 0;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		EACB7F551F137A32003EB673 /* rgb-slam */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "rgb-slam"; sourceTree = BUILT_PRODUCTS_DIR; };
+		EACB7F581F137A32003EB673 /* generatePointCloud.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = generatePointCloud.cpp; sourceTree = "<group>"; };
+		EACB7F601F137B2E003EB673 /* liblibjasper.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = liblibjasper.a; path = "../../../3rd/opencv-3.2/lib/liblibjasper.a"; sourceTree = "<group>"; };
+		EACB7F611F137B2E003EB673 /* liblibjpeg.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = liblibjpeg.a; path = "../../../3rd/opencv-3.2/lib/liblibjpeg.a"; sourceTree = "<group>"; };
+		EACB7F621F137B2E003EB673 /* liblibpng.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = liblibpng.a; path = "../../../3rd/opencv-3.2/lib/liblibpng.a"; sourceTree = "<group>"; };
+		EACB7F631F137B2E003EB673 /* liblibtiff.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = liblibtiff.a; path = "../../../3rd/opencv-3.2/lib/liblibtiff.a"; sourceTree = "<group>"; };
+		EACB7F641F137B2E003EB673 /* libopencv_calib3d.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libopencv_calib3d.a; path = "../../../3rd/opencv-3.2/lib/libopencv_calib3d.a"; sourceTree = "<group>"; };
+		EACB7F651F137B2E003EB673 /* libopencv_core.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libopencv_core.a; path = "../../../3rd/opencv-3.2/lib/libopencv_core.a"; sourceTree = "<group>"; };
+		EACB7F661F137B2E003EB673 /* libopencv_features2d.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libopencv_features2d.a; path = "../../../3rd/opencv-3.2/lib/libopencv_features2d.a"; sourceTree = "<group>"; };
+		EACB7F671F137B2E003EB673 /* libopencv_flann.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libopencv_flann.a; path = "../../../3rd/opencv-3.2/lib/libopencv_flann.a"; sourceTree = "<group>"; };
+		EACB7F681F137B2E003EB673 /* libopencv_highgui.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libopencv_highgui.a; path = "../../../3rd/opencv-3.2/lib/libopencv_highgui.a"; sourceTree = "<group>"; };
+		EACB7F691F137B2E003EB673 /* libopencv_imgcodecs.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libopencv_imgcodecs.a; path = "../../../3rd/opencv-3.2/lib/libopencv_imgcodecs.a"; sourceTree = "<group>"; };
+		EACB7F6A1F137B2E003EB673 /* libopencv_imgproc.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libopencv_imgproc.a; path = "../../../3rd/opencv-3.2/lib/libopencv_imgproc.a"; sourceTree = "<group>"; };
+		EACB7F6B1F137B2E003EB673 /* libwebp.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libwebp.a; path = "../../../3rd/opencv-3.2/lib/libwebp.a"; sourceTree = "<group>"; };
+		EACB7F6C1F137B2E003EB673 /* libzlib.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libzlib.a; path = "../../../3rd/opencv-3.2/lib/libzlib.a"; sourceTree = "<group>"; };
+		EACB7F7A1F137BCC003EB673 /* libpcl_2d.1.8.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libpcl_2d.1.8.0.dylib; path = ../../../../../usr/local/Cellar/pcl/1.8.0_7/lib/libpcl_2d.1.8.0.dylib; sourceTree = "<group>"; };
+		EACB7F7B1F137BCC003EB673 /* libpcl_apps.1.8.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libpcl_apps.1.8.0.dylib; path = ../../../../../usr/local/Cellar/pcl/1.8.0_7/lib/libpcl_apps.1.8.0.dylib; sourceTree = "<group>"; };
+		EACB7F7C1F137BCC003EB673 /* libpcl_common.1.8.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libpcl_common.1.8.0.dylib; path = ../../../../../usr/local/Cellar/pcl/1.8.0_7/lib/libpcl_common.1.8.0.dylib; sourceTree = "<group>"; };
+		EACB7F7D1F137BCC003EB673 /* libpcl_features.1.8.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libpcl_features.1.8.0.dylib; path = ../../../../../usr/local/Cellar/pcl/1.8.0_7/lib/libpcl_features.1.8.0.dylib; sourceTree = "<group>"; };
+		EACB7F7E1F137BCC003EB673 /* libpcl_filters.1.8.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libpcl_filters.1.8.0.dylib; path = ../../../../../usr/local/Cellar/pcl/1.8.0_7/lib/libpcl_filters.1.8.0.dylib; sourceTree = "<group>"; };
+		EACB7F7F1F137BCC003EB673 /* libpcl_io_ply.1.8.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libpcl_io_ply.1.8.0.dylib; path = ../../../../../usr/local/Cellar/pcl/1.8.0_7/lib/libpcl_io_ply.1.8.0.dylib; sourceTree = "<group>"; };
+		EACB7F801F137BCC003EB673 /* libpcl_io.1.8.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libpcl_io.1.8.0.dylib; path = ../../../../../usr/local/Cellar/pcl/1.8.0_7/lib/libpcl_io.1.8.0.dylib; sourceTree = "<group>"; };
+		EACB7F811F137BCC003EB673 /* libpcl_kdtree.1.8.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libpcl_kdtree.1.8.0.dylib; path = ../../../../../usr/local/Cellar/pcl/1.8.0_7/lib/libpcl_kdtree.1.8.0.dylib; sourceTree = "<group>"; };
+		EACB7F821F137BCC003EB673 /* libpcl_keypoints.1.8.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libpcl_keypoints.1.8.0.dylib; path = ../../../../../usr/local/Cellar/pcl/1.8.0_7/lib/libpcl_keypoints.1.8.0.dylib; sourceTree = "<group>"; };
+		EACB7F831F137BCC003EB673 /* libpcl_ml.1.8.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libpcl_ml.1.8.0.dylib; path = ../../../../../usr/local/Cellar/pcl/1.8.0_7/lib/libpcl_ml.1.8.0.dylib; sourceTree = "<group>"; };
+		EACB7F841F137BCC003EB673 /* libpcl_octree.1.8.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libpcl_octree.1.8.0.dylib; path = ../../../../../usr/local/Cellar/pcl/1.8.0_7/lib/libpcl_octree.1.8.0.dylib; sourceTree = "<group>"; };
+		EACB7F851F137BCC003EB673 /* libpcl_outofcore.1.8.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libpcl_outofcore.1.8.0.dylib; path = ../../../../../usr/local/Cellar/pcl/1.8.0_7/lib/libpcl_outofcore.1.8.0.dylib; sourceTree = "<group>"; };
+		EACB7F861F137BCC003EB673 /* libpcl_people.1.8.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libpcl_people.1.8.0.dylib; path = ../../../../../usr/local/Cellar/pcl/1.8.0_7/lib/libpcl_people.1.8.0.dylib; sourceTree = "<group>"; };
+		EACB7F871F137BCC003EB673 /* libpcl_recognition.1.8.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libpcl_recognition.1.8.0.dylib; path = ../../../../../usr/local/Cellar/pcl/1.8.0_7/lib/libpcl_recognition.1.8.0.dylib; sourceTree = "<group>"; };
+		EACB7F881F137BCC003EB673 /* libpcl_registration.1.8.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libpcl_registration.1.8.0.dylib; path = ../../../../../usr/local/Cellar/pcl/1.8.0_7/lib/libpcl_registration.1.8.0.dylib; sourceTree = "<group>"; };
+		EACB7F891F137BCC003EB673 /* libpcl_sample_consensus.1.8.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libpcl_sample_consensus.1.8.0.dylib; path = ../../../../../usr/local/Cellar/pcl/1.8.0_7/lib/libpcl_sample_consensus.1.8.0.dylib; sourceTree = "<group>"; };
+		EACB7F8A1F137BCC003EB673 /* libpcl_search.1.8.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libpcl_search.1.8.0.dylib; path = ../../../../../usr/local/Cellar/pcl/1.8.0_7/lib/libpcl_search.1.8.0.dylib; sourceTree = "<group>"; };
+		EACB7F8B1F137BCC003EB673 /* libpcl_segmentation.1.8.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libpcl_segmentation.1.8.0.dylib; path = ../../../../../usr/local/Cellar/pcl/1.8.0_7/lib/libpcl_segmentation.1.8.0.dylib; sourceTree = "<group>"; };
+		EACB7F8C1F137BCC003EB673 /* libpcl_simulation_io.1.8.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libpcl_simulation_io.1.8.0.dylib; path = ../../../../../usr/local/Cellar/pcl/1.8.0_7/lib/libpcl_simulation_io.1.8.0.dylib; sourceTree = "<group>"; };
+		EACB7F8D1F137BCC003EB673 /* libpcl_simulation.1.8.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libpcl_simulation.1.8.0.dylib; path = ../../../../../usr/local/Cellar/pcl/1.8.0_7/lib/libpcl_simulation.1.8.0.dylib; sourceTree = "<group>"; };
+		EACB7F8E1F137BCC003EB673 /* libpcl_stereo.1.8.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libpcl_stereo.1.8.0.dylib; path = ../../../../../usr/local/Cellar/pcl/1.8.0_7/lib/libpcl_stereo.1.8.0.dylib; sourceTree = "<group>"; };
+		EACB7F8F1F137BCC003EB673 /* libpcl_surface.1.8.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libpcl_surface.1.8.0.dylib; path = ../../../../../usr/local/Cellar/pcl/1.8.0_7/lib/libpcl_surface.1.8.0.dylib; sourceTree = "<group>"; };
+		EACB7F901F137BCC003EB673 /* libpcl_tracking.1.8.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libpcl_tracking.1.8.0.dylib; path = ../../../../../usr/local/Cellar/pcl/1.8.0_7/lib/libpcl_tracking.1.8.0.dylib; sourceTree = "<group>"; };
+		EACB7F911F137BCC003EB673 /* libpcl_visualization.1.8.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libpcl_visualization.1.8.0.dylib; path = ../../../../../usr/local/Cellar/pcl/1.8.0_7/lib/libpcl_visualization.1.8.0.dylib; sourceTree = "<group>"; };
+		EACB7FAA1F137D39003EB673 /* libboost_system.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libboost_system.a; path = ../../../../../usr/local/Cellar/boost/1.64.0_1/lib/libboost_system.a; sourceTree = "<group>"; };
+		EACB7FAC1F137EFC003EB673 /* libopenblas_haswellp-r0.2.20.dev.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = "libopenblas_haswellp-r0.2.20.dev.a"; path = "../../../../../opt/OpenBLAS/lib/libopenblas_haswellp-r0.2.20.dev.a"; sourceTree = "<group>"; };
+		EACB7FAE1F13809A003EB673 /* slamBase.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = slamBase.cpp; sourceTree = "<group>"; };
+		EACB7FAF1F13809A003EB673 /* slamBase.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = slamBase.hpp; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		EACB7F521F137A32003EB673 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EACB7FAD1F137EFC003EB673 /* libopenblas_haswellp-r0.2.20.dev.a in Frameworks */,
+				EACB7FAB1F137D39003EB673 /* libboost_system.a in Frameworks */,
+				EACB7F921F137BCC003EB673 /* libpcl_2d.1.8.0.dylib in Frameworks */,
+				EACB7F931F137BCC003EB673 /* libpcl_apps.1.8.0.dylib in Frameworks */,
+				EACB7F941F137BCC003EB673 /* libpcl_common.1.8.0.dylib in Frameworks */,
+				EACB7F951F137BCC003EB673 /* libpcl_features.1.8.0.dylib in Frameworks */,
+				EACB7F961F137BCC003EB673 /* libpcl_filters.1.8.0.dylib in Frameworks */,
+				EACB7F971F137BCC003EB673 /* libpcl_io_ply.1.8.0.dylib in Frameworks */,
+				EACB7F981F137BCC003EB673 /* libpcl_io.1.8.0.dylib in Frameworks */,
+				EACB7F991F137BCC003EB673 /* libpcl_kdtree.1.8.0.dylib in Frameworks */,
+				EACB7F9A1F137BCC003EB673 /* libpcl_keypoints.1.8.0.dylib in Frameworks */,
+				EACB7F9B1F137BCC003EB673 /* libpcl_ml.1.8.0.dylib in Frameworks */,
+				EACB7F9C1F137BCC003EB673 /* libpcl_octree.1.8.0.dylib in Frameworks */,
+				EACB7F9D1F137BCC003EB673 /* libpcl_outofcore.1.8.0.dylib in Frameworks */,
+				EACB7F9E1F137BCC003EB673 /* libpcl_people.1.8.0.dylib in Frameworks */,
+				EACB7F9F1F137BCC003EB673 /* libpcl_recognition.1.8.0.dylib in Frameworks */,
+				EACB7FA01F137BCC003EB673 /* libpcl_registration.1.8.0.dylib in Frameworks */,
+				EACB7FA11F137BCC003EB673 /* libpcl_sample_consensus.1.8.0.dylib in Frameworks */,
+				EACB7FA21F137BCC003EB673 /* libpcl_search.1.8.0.dylib in Frameworks */,
+				EACB7FA31F137BCC003EB673 /* libpcl_segmentation.1.8.0.dylib in Frameworks */,
+				EACB7FA41F137BCC003EB673 /* libpcl_simulation_io.1.8.0.dylib in Frameworks */,
+				EACB7FA51F137BCC003EB673 /* libpcl_simulation.1.8.0.dylib in Frameworks */,
+				EACB7FA61F137BCC003EB673 /* libpcl_stereo.1.8.0.dylib in Frameworks */,
+				EACB7FA71F137BCC003EB673 /* libpcl_surface.1.8.0.dylib in Frameworks */,
+				EACB7FA81F137BCC003EB673 /* libpcl_tracking.1.8.0.dylib in Frameworks */,
+				EACB7FA91F137BCC003EB673 /* libpcl_visualization.1.8.0.dylib in Frameworks */,
+				EACB7F6D1F137B2E003EB673 /* liblibjasper.a in Frameworks */,
+				EACB7F6E1F137B2E003EB673 /* liblibjpeg.a in Frameworks */,
+				EACB7F6F1F137B2E003EB673 /* liblibpng.a in Frameworks */,
+				EACB7F701F137B2E003EB673 /* liblibtiff.a in Frameworks */,
+				EACB7F711F137B2E003EB673 /* libopencv_calib3d.a in Frameworks */,
+				EACB7F721F137B2E003EB673 /* libopencv_core.a in Frameworks */,
+				EACB7F731F137B2E003EB673 /* libopencv_features2d.a in Frameworks */,
+				EACB7F741F137B2E003EB673 /* libopencv_flann.a in Frameworks */,
+				EACB7F751F137B2E003EB673 /* libopencv_highgui.a in Frameworks */,
+				EACB7F761F137B2E003EB673 /* libopencv_imgcodecs.a in Frameworks */,
+				EACB7F771F137B2E003EB673 /* libopencv_imgproc.a in Frameworks */,
+				EACB7F781F137B2E003EB673 /* libwebp.a in Frameworks */,
+				EACB7F791F137B2E003EB673 /* libzlib.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		EACB7F4C1F137A32003EB673 = {
+			isa = PBXGroup;
+			children = (
+				EACB7F571F137A32003EB673 /* rgb-slam */,
+				EACB7F561F137A32003EB673 /* Products */,
+				EACB7F5F1F137B2E003EB673 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		EACB7F561F137A32003EB673 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				EACB7F551F137A32003EB673 /* rgb-slam */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		EACB7F571F137A32003EB673 /* rgb-slam */ = {
+			isa = PBXGroup;
+			children = (
+				EACB7F581F137A32003EB673 /* generatePointCloud.cpp */,
+				EACB7FAE1F13809A003EB673 /* slamBase.cpp */,
+				EACB7FAF1F13809A003EB673 /* slamBase.hpp */,
+			);
+			path = "rgb-slam";
+			sourceTree = "<group>";
+		};
+		EACB7F5F1F137B2E003EB673 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				EACB7FAC1F137EFC003EB673 /* libopenblas_haswellp-r0.2.20.dev.a */,
+				EACB7FAA1F137D39003EB673 /* libboost_system.a */,
+				EACB7F7A1F137BCC003EB673 /* libpcl_2d.1.8.0.dylib */,
+				EACB7F7B1F137BCC003EB673 /* libpcl_apps.1.8.0.dylib */,
+				EACB7F7C1F137BCC003EB673 /* libpcl_common.1.8.0.dylib */,
+				EACB7F7D1F137BCC003EB673 /* libpcl_features.1.8.0.dylib */,
+				EACB7F7E1F137BCC003EB673 /* libpcl_filters.1.8.0.dylib */,
+				EACB7F7F1F137BCC003EB673 /* libpcl_io_ply.1.8.0.dylib */,
+				EACB7F801F137BCC003EB673 /* libpcl_io.1.8.0.dylib */,
+				EACB7F811F137BCC003EB673 /* libpcl_kdtree.1.8.0.dylib */,
+				EACB7F821F137BCC003EB673 /* libpcl_keypoints.1.8.0.dylib */,
+				EACB7F831F137BCC003EB673 /* libpcl_ml.1.8.0.dylib */,
+				EACB7F841F137BCC003EB673 /* libpcl_octree.1.8.0.dylib */,
+				EACB7F851F137BCC003EB673 /* libpcl_outofcore.1.8.0.dylib */,
+				EACB7F861F137BCC003EB673 /* libpcl_people.1.8.0.dylib */,
+				EACB7F871F137BCC003EB673 /* libpcl_recognition.1.8.0.dylib */,
+				EACB7F881F137BCC003EB673 /* libpcl_registration.1.8.0.dylib */,
+				EACB7F891F137BCC003EB673 /* libpcl_sample_consensus.1.8.0.dylib */,
+				EACB7F8A1F137BCC003EB673 /* libpcl_search.1.8.0.dylib */,
+				EACB7F8B1F137BCC003EB673 /* libpcl_segmentation.1.8.0.dylib */,
+				EACB7F8C1F137BCC003EB673 /* libpcl_simulation_io.1.8.0.dylib */,
+				EACB7F8D1F137BCC003EB673 /* libpcl_simulation.1.8.0.dylib */,
+				EACB7F8E1F137BCC003EB673 /* libpcl_stereo.1.8.0.dylib */,
+				EACB7F8F1F137BCC003EB673 /* libpcl_surface.1.8.0.dylib */,
+				EACB7F901F137BCC003EB673 /* libpcl_tracking.1.8.0.dylib */,
+				EACB7F911F137BCC003EB673 /* libpcl_visualization.1.8.0.dylib */,
+				EACB7F601F137B2E003EB673 /* liblibjasper.a */,
+				EACB7F611F137B2E003EB673 /* liblibjpeg.a */,
+				EACB7F621F137B2E003EB673 /* liblibpng.a */,
+				EACB7F631F137B2E003EB673 /* liblibtiff.a */,
+				EACB7F641F137B2E003EB673 /* libopencv_calib3d.a */,
+				EACB7F651F137B2E003EB673 /* libopencv_core.a */,
+				EACB7F661F137B2E003EB673 /* libopencv_features2d.a */,
+				EACB7F671F137B2E003EB673 /* libopencv_flann.a */,
+				EACB7F681F137B2E003EB673 /* libopencv_highgui.a */,
+				EACB7F691F137B2E003EB673 /* libopencv_imgcodecs.a */,
+				EACB7F6A1F137B2E003EB673 /* libopencv_imgproc.a */,
+				EACB7F6B1F137B2E003EB673 /* libwebp.a */,
+				EACB7F6C1F137B2E003EB673 /* libzlib.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		EACB7F541F137A32003EB673 /* rgb-slam */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EACB7F5C1F137A32003EB673 /* Build configuration list for PBXNativeTarget "rgb-slam" */;
+			buildPhases = (
+				EACB7F511F137A32003EB673 /* Sources */,
+				EACB7F521F137A32003EB673 /* Frameworks */,
+				EACB7F531F137A32003EB673 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "rgb-slam";
+			productName = "rgb-slam";
+			productReference = EACB7F551F137A32003EB673 /* rgb-slam */;
+			productType = "com.apple.product-type.tool";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		EACB7F4D1F137A32003EB673 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0830;
+				ORGANIZATIONNAME = sofiawu;
+				TargetAttributes = {
+					EACB7F541F137A32003EB673 = {
+						CreatedOnToolsVersion = 8.3.3;
+						DevelopmentTeam = 99BH65ZR59;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = EACB7F501F137A32003EB673 /* Build configuration list for PBXProject "rgb-slam" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = EACB7F4C1F137A32003EB673;
+			productRefGroup = EACB7F561F137A32003EB673 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				EACB7F541F137A32003EB673 /* rgb-slam */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		EACB7F511F137A32003EB673 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EACB7F591F137A32003EB673 /* generatePointCloud.cpp in Sources */,
+				EACB7FB01F13809A003EB673 /* slamBase.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		EACB7F5A1F137A32003EB673 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		EACB7F5B1F137A32003EB673 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		EACB7F5D1F137A32003EB673 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DEVELOPMENT_TEAM = 99BH65ZR59;
+				HEADER_SEARCH_PATHS = (
+					"/Users/sofiawu/3rd/opencv-3.2/include",
+					"/usr/local/opt/pcl/include/pcl-1.8/",
+					/usr/local/opt/eigen/include/eigen3,
+					/usr/local/opt/boost/include,
+				);
+				LIBRARY_SEARCH_PATHS = (
+					"/Users/sofiawu/3rd/opencv-3.2/lib",
+					/usr/local/Cellar/pcl/1.8.0_7/lib,
+					/usr/local/Cellar/boost/1.64.0_1/lib,
+					/opt/OpenBLAS/lib,
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		EACB7F5E1F137A32003EB673 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DEVELOPMENT_TEAM = 99BH65ZR59;
+				HEADER_SEARCH_PATHS = (
+					"/Users/sofiawu/3rd/opencv-3.2/include",
+					"/usr/local/opt/pcl/include/pcl-1.8/",
+					/usr/local/opt/eigen/include/eigen3,
+					/usr/local/opt/boost/include,
+				);
+				LIBRARY_SEARCH_PATHS = (
+					"/Users/sofiawu/3rd/opencv-3.2/lib",
+					/usr/local/Cellar/pcl/1.8.0_7/lib,
+					/usr/local/Cellar/boost/1.64.0_1/lib,
+					/opt/OpenBLAS/lib,
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		EACB7F501F137A32003EB673 /* Build configuration list for PBXProject "rgb-slam" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EACB7F5A1F137A32003EB673 /* Debug */,
+				EACB7F5B1F137A32003EB673 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EACB7F5C1F137A32003EB673 /* Build configuration list for PBXNativeTarget "rgb-slam" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EACB7F5D1F137A32003EB673 /* Debug */,
+				EACB7F5E1F137A32003EB673 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = EACB7F4D1F137A32003EB673 /* Project object */;
+}
