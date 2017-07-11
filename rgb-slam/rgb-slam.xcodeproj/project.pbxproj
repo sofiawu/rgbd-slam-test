@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		EACB7F591F137A32003EB673 /* visualOdometry..cpp in Sources */ = {isa = PBXBuildFile; fileRef = EACB7F581F137A32003EB673 /* visualOdometry..cpp */; };
+		EACB7F591F137A32003EB673 /* slamEnd.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EACB7F581F137A32003EB673 /* slamEnd.cpp */; };
 		EACB7F921F137BCC003EB673 /* libpcl_2d.1.8.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = EACB7F7A1F137BCC003EB673 /* libpcl_2d.1.8.0.dylib */; };
 		EACB7F941F137BCC003EB673 /* libpcl_common.1.8.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = EACB7F7C1F137BCC003EB673 /* libpcl_common.1.8.0.dylib */; };
 		EACB7F951F137BCC003EB673 /* libpcl_features.1.8.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = EACB7F7D1F137BCC003EB673 /* libpcl_features.1.8.0.dylib */; };
@@ -41,6 +41,11 @@
 		EACB7FBD1F13855D003EB673 /* libopencv_imgcodecs.3.2.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = EACB7FB61F13855D003EB673 /* libopencv_imgcodecs.3.2.0.dylib */; };
 		EACB7FBE1F13855D003EB673 /* libopencv_imgproc.3.2.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = EACB7FB71F13855D003EB673 /* libopencv_imgproc.3.2.0.dylib */; };
 		EACB7FC01F138CE2003EB673 /* libvtkCommonCore-7.1.1.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = EACB7FBF1F138CE2003EB673 /* libvtkCommonCore-7.1.1.dylib */; };
+		EACB7FCC1F148200003EB673 /* libg2o_core.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = EACB7FCB1F148200003EB673 /* libg2o_core.dylib */; };
+		EACB7FCE1F148481003EB673 /* libg2o_solver_csparse.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = EACB7FCD1F148481003EB673 /* libg2o_solver_csparse.dylib */; };
+		EACB7FD01F1484D3003EB673 /* libg2o_types_slam3d.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = EACB7FCF1F1484D3003EB673 /* libg2o_types_slam3d.dylib */; };
+		EACB7FD21F14850A003EB673 /* libg2o_cli.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = EACB7FD11F14850A003EB673 /* libg2o_cli.dylib */; };
+		EACB7FD41F14853E003EB673 /* libg2o_stuff.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = EACB7FD31F14853E003EB673 /* libg2o_stuff.dylib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -57,7 +62,7 @@
 
 /* Begin PBXFileReference section */
 		EACB7F551F137A32003EB673 /* rgb-slam */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "rgb-slam"; sourceTree = BUILT_PRODUCTS_DIR; };
-		EACB7F581F137A32003EB673 /* visualOdometry..cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = visualOdometry..cpp; sourceTree = "<group>"; };
+		EACB7F581F137A32003EB673 /* slamEnd.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = slamEnd.cpp; sourceTree = "<group>"; };
 		EACB7F601F137B2E003EB673 /* liblibjasper.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = liblibjasper.a; path = "../../../3rd/opencv-3.2/lib/liblibjasper.a"; sourceTree = "<group>"; };
 		EACB7F611F137B2E003EB673 /* liblibjpeg.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = liblibjpeg.a; path = "../../../3rd/opencv-3.2/lib/liblibjpeg.a"; sourceTree = "<group>"; };
 		EACB7F621F137B2E003EB673 /* liblibpng.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = liblibpng.a; path = "../../../3rd/opencv-3.2/lib/liblibpng.a"; sourceTree = "<group>"; };
@@ -112,6 +117,11 @@
 		EACB7FC51F1392D0003EB673 /* libvtkViewsCore-7.1.1.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libvtkViewsCore-7.1.1.dylib"; path = "../../../../../usr/local/Cellar/vtk/7.1.1_1/lib/libvtkViewsCore-7.1.1.dylib"; sourceTree = "<group>"; };
 		EACB7FC71F1392FA003EB673 /* libvtkRenderingCore-7.1.1.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libvtkRenderingCore-7.1.1.dylib"; path = "../../../../../usr/local/Cellar/vtk/7.1.1_1/lib/libvtkRenderingCore-7.1.1.dylib"; sourceTree = "<group>"; };
 		EACB7FC91F146513003EB673 /* pcl_viewer.app */ = {isa = PBXFileReference; lastKnownFileType = wrapper.application; name = pcl_viewer.app; path = ../../../../../usr/local/Cellar/pcl/1.8.0_7/pcl_viewer.app; sourceTree = "<group>"; };
+		EACB7FCB1F148200003EB673 /* libg2o_core.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libg2o_core.dylib; path = "../../../../../usr/local/Cellar/g2o/2016-04-24_2/lib/libg2o_core.dylib"; sourceTree = "<group>"; };
+		EACB7FCD1F148481003EB673 /* libg2o_solver_csparse.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libg2o_solver_csparse.dylib; path = "../../../../../usr/local/Cellar/g2o/2016-04-24_2/lib/libg2o_solver_csparse.dylib"; sourceTree = "<group>"; };
+		EACB7FCF1F1484D3003EB673 /* libg2o_types_slam3d.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libg2o_types_slam3d.dylib; path = "../../../../../usr/local/Cellar/g2o/2016-04-24_2/lib/libg2o_types_slam3d.dylib"; sourceTree = "<group>"; };
+		EACB7FD11F14850A003EB673 /* libg2o_cli.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libg2o_cli.dylib; path = "../../../../../usr/local/Cellar/g2o/2016-04-24_2/lib/libg2o_cli.dylib"; sourceTree = "<group>"; };
+		EACB7FD31F14853E003EB673 /* libg2o_stuff.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libg2o_stuff.dylib; path = "../../../../../usr/local/Cellar/g2o/2016-04-24_2/lib/libg2o_stuff.dylib"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -119,6 +129,11 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EACB7FD41F14853E003EB673 /* libg2o_stuff.dylib in Frameworks */,
+				EACB7FD21F14850A003EB673 /* libg2o_cli.dylib in Frameworks */,
+				EACB7FD01F1484D3003EB673 /* libg2o_types_slam3d.dylib in Frameworks */,
+				EACB7FCE1F148481003EB673 /* libg2o_solver_csparse.dylib in Frameworks */,
+				EACB7FCC1F148200003EB673 /* libg2o_core.dylib in Frameworks */,
 				EACB7FC01F138CE2003EB673 /* libvtkCommonCore-7.1.1.dylib in Frameworks */,
 				EACB7FB81F13855D003EB673 /* libopencv_calib3d.3.2.0.dylib in Frameworks */,
 				EACB7FB91F13855D003EB673 /* libopencv_core.3.2.0.dylib in Frameworks */,
@@ -177,7 +192,7 @@
 		EACB7F571F137A32003EB673 /* rgb-slam */ = {
 			isa = PBXGroup;
 			children = (
-				EACB7F581F137A32003EB673 /* visualOdometry..cpp */,
+				EACB7F581F137A32003EB673 /* slamEnd.cpp */,
 				EACB7FAE1F13809A003EB673 /* slamBase.cpp */,
 				EACB7FAF1F13809A003EB673 /* slamBase.hpp */,
 			);
@@ -187,6 +202,11 @@
 		EACB7F5F1F137B2E003EB673 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				EACB7FD31F14853E003EB673 /* libg2o_stuff.dylib */,
+				EACB7FD11F14850A003EB673 /* libg2o_cli.dylib */,
+				EACB7FCF1F1484D3003EB673 /* libg2o_types_slam3d.dylib */,
+				EACB7FCD1F148481003EB673 /* libg2o_solver_csparse.dylib */,
+				EACB7FCB1F148200003EB673 /* libg2o_core.dylib */,
 				EACB7FC91F146513003EB673 /* pcl_viewer.app */,
 				EACB7FC71F1392FA003EB673 /* libvtkRenderingCore-7.1.1.dylib */,
 				EACB7FC51F1392D0003EB673 /* libvtkViewsCore-7.1.1.dylib */,
@@ -301,7 +321,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EACB7F591F137A32003EB673 /* visualOdometry..cpp in Sources */,
+				EACB7F591F137A32003EB673 /* slamEnd.cpp in Sources */,
 				EACB7FB01F13809A003EB673 /* slamBase.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -408,6 +428,7 @@
 					/usr/local/opt/eigen/include/eigen3,
 					/usr/local/opt/boost/include,
 					"/usr/local/opt/vtk/include/vtk-7.1",
+					"/usr/local/Cellar/g2o/2016-04-24_2/include",
 				);
 				LIBRARY_SEARCH_PATHS = (
 					/usr/local/Cellar/pcl/1.8.0_7/lib,
@@ -415,6 +436,7 @@
 					/opt/OpenBLAS/lib,
 					/usr/local/Cellar/opencv3/3.2.0/lib,
 					/usr/local/Cellar/vtk/7.1.1_1/lib,
+					"/usr/local/Cellar/g2o/2016-04-24_2/lib",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -430,6 +452,7 @@
 					/usr/local/opt/eigen/include/eigen3,
 					/usr/local/opt/boost/include,
 					"/usr/local/opt/vtk/include/vtk-7.1",
+					"/usr/local/Cellar/g2o/2016-04-24_2/include",
 				);
 				LIBRARY_SEARCH_PATHS = (
 					/usr/local/Cellar/pcl/1.8.0_7/lib,
@@ -437,6 +460,7 @@
 					/opt/OpenBLAS/lib,
 					/usr/local/Cellar/opencv3/3.2.0/lib,
 					/usr/local/Cellar/vtk/7.1.1_1/lib,
+					"/usr/local/Cellar/g2o/2016-04-24_2/lib",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
