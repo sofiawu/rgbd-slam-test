@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		EACB7F591F137A32003EB673 /* slamEnd.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EACB7F581F137A32003EB673 /* slamEnd.cpp */; };
+		EACB7F591F137A32003EB673 /* slam.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EACB7F581F137A32003EB673 /* slam.cpp */; };
 		EACB7F921F137BCC003EB673 /* libpcl_2d.1.8.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = EACB7F7A1F137BCC003EB673 /* libpcl_2d.1.8.0.dylib */; };
 		EACB7F941F137BCC003EB673 /* libpcl_common.1.8.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = EACB7F7C1F137BCC003EB673 /* libpcl_common.1.8.0.dylib */; };
 		EACB7F951F137BCC003EB673 /* libpcl_features.1.8.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = EACB7F7D1F137BCC003EB673 /* libpcl_features.1.8.0.dylib */; };
@@ -62,7 +62,7 @@
 
 /* Begin PBXFileReference section */
 		EACB7F551F137A32003EB673 /* rgb-slam */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "rgb-slam"; sourceTree = BUILT_PRODUCTS_DIR; };
-		EACB7F581F137A32003EB673 /* slamEnd.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = slamEnd.cpp; sourceTree = "<group>"; };
+		EACB7F581F137A32003EB673 /* slam.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = slam.cpp; sourceTree = "<group>"; };
 		EACB7F601F137B2E003EB673 /* liblibjasper.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = liblibjasper.a; path = "../../../3rd/opencv-3.2/lib/liblibjasper.a"; sourceTree = "<group>"; };
 		EACB7F611F137B2E003EB673 /* liblibjpeg.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = liblibjpeg.a; path = "../../../3rd/opencv-3.2/lib/liblibjpeg.a"; sourceTree = "<group>"; };
 		EACB7F621F137B2E003EB673 /* liblibpng.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = liblibpng.a; path = "../../../3rd/opencv-3.2/lib/liblibpng.a"; sourceTree = "<group>"; };
@@ -129,6 +129,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EACB7F961F137BCC003EB673 /* libpcl_filters.1.8.0.dylib in Frameworks */,
 				EACB7FD41F14853E003EB673 /* libg2o_stuff.dylib in Frameworks */,
 				EACB7FD21F14850A003EB673 /* libg2o_cli.dylib in Frameworks */,
 				EACB7FD01F1484D3003EB673 /* libg2o_types_slam3d.dylib in Frameworks */,
@@ -147,7 +148,6 @@
 				EACB7F921F137BCC003EB673 /* libpcl_2d.1.8.0.dylib in Frameworks */,
 				EACB7F941F137BCC003EB673 /* libpcl_common.1.8.0.dylib in Frameworks */,
 				EACB7F951F137BCC003EB673 /* libpcl_features.1.8.0.dylib in Frameworks */,
-				EACB7F961F137BCC003EB673 /* libpcl_filters.1.8.0.dylib in Frameworks */,
 				EACB7F971F137BCC003EB673 /* libpcl_io_ply.1.8.0.dylib in Frameworks */,
 				EACB7F981F137BCC003EB673 /* libpcl_io.1.8.0.dylib in Frameworks */,
 				EACB7F991F137BCC003EB673 /* libpcl_kdtree.1.8.0.dylib in Frameworks */,
@@ -192,7 +192,7 @@
 		EACB7F571F137A32003EB673 /* rgb-slam */ = {
 			isa = PBXGroup;
 			children = (
-				EACB7F581F137A32003EB673 /* slamEnd.cpp */,
+				EACB7F581F137A32003EB673 /* slam.cpp */,
 				EACB7FAE1F13809A003EB673 /* slamBase.cpp */,
 				EACB7FAF1F13809A003EB673 /* slamBase.hpp */,
 			);
@@ -321,7 +321,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EACB7F591F137A32003EB673 /* slamEnd.cpp in Sources */,
+				EACB7F591F137A32003EB673 /* slam.cpp in Sources */,
 				EACB7FB01F13809A003EB673 /* slamBase.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
