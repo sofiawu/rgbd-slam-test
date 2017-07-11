@@ -12,8 +12,8 @@ PointCloud::Ptr image2PointCloud( cv::Mat& rgb, cv::Mat& depth, CAMERA_INTRINSIC
 {
     PointCloud::Ptr cloud ( new PointCloud );
     
-    for (int m = 0; m < depth.rows; m++)
-        for (int n=0; n < depth.cols; n++)
+    for (int m = 0; m < depth.rows; m += 2)
+        for (int n=0; n < depth.cols; n += 2)
         {
             // 获取深度图中(m,n)处的值
             ushort d = depth.ptr<ushort>(m)[n];
@@ -39,7 +39,7 @@ PointCloud::Ptr image2PointCloud( cv::Mat& rgb, cv::Mat& depth, CAMERA_INTRINSIC
         }
     // 设置并保存点云
     cloud->height = 1;
-    cloud->width = (int)cloud->points.size();
+    cloud->width = cloud->points.size();
     cloud->is_dense = false;
     
     return cloud;
@@ -55,14 +55,15 @@ cv::Point3f point2dTo3d( cv::Point3f& point, CAMERA_INTRINSIC_PARAMETERS& camera
 }
 
 // computeKeyPointsAndDesp 同时提取关键点与特征描述子
-void computeKeyPointsAndDesp( FRAME& frame)
+void computeKeyPointsAndDesp( FRAME& frame )
 {
-    // 声明特征提取器与描述子提取器
-    cv::Ptr<cv::ORB> detector = cv::ORB::create(800, 1.2f, 8);
+    cv::Ptr<cv::ORB> _detector;
     
-    vector< cv::KeyPoint > kp1, kp2; //关键点
-    cv::Mat desp1, desp2; // 计算描述子
-    detector->detectAndCompute(frame.rgb, cv::noArray(), frame.kp, frame.desp);
+    _detector = cv::ORB::create( 800, 1.2f, 8 );
+    
+    _detector->detectAndCompute(frame.rgb, cv::noArray(), frame.kp, frame.desp);
+    
+    return;
 }
 
 // estimateMotion 计算两个帧之间的运动
@@ -75,7 +76,7 @@ RESULT_OF_PNP estimateMotion( FRAME& frame1, FRAME& frame2, CAMERA_INTRINSIC_PAR
     cv::BFMatcher matcher;
     matcher.match( frame1.desp, frame2.desp, matches );
     
-    cout<<"find total "<<matches.size()<<" matches."<<endl;
+    RESULT_OF_PNP result;
     vector< cv::DMatch > goodMatches;
     double minDis = 9999;
     double good_match_threshold = atof( pd.getData( "good_match_threshold" ).c_str() );
@@ -85,13 +86,22 @@ RESULT_OF_PNP estimateMotion( FRAME& frame1, FRAME& frame2, CAMERA_INTRINSIC_PAR
             minDis = matches[i].distance;
     }
     
+    if ( minDis < 10 )
+        minDis = 10;
+    
     for ( size_t i=0; i<matches.size(); i++ )
     {
-        if (matches[i].distance < 10*minDis)
+        if (matches[i].distance < good_match_threshold*minDis)
             goodMatches.push_back( matches[i] );
     }
     
     cout<<"good matches: "<<goodMatches.size()<<endl;
+    
+    if (goodMatches.size() <= 5)
+    {
+        result.inliers = -1;
+        return result;
+    }
     // 第一个帧的三维点
     vector<cv::Point3f> pts_obj;
     // 第二个帧的图像点
@@ -114,20 +124,24 @@ RESULT_OF_PNP estimateMotion( FRAME& frame1, FRAME& frame2, CAMERA_INTRINSIC_PAR
         pts_obj.push_back( pd );
     }
     
-    float camera_matrix_data[3][3] = {
+    if (pts_obj.size() ==0 || pts_img.size()==0)
+    {
+        result.inliers = -1;
+        return result;
+    }
+    
+    double camera_matrix_data[3][3] = {
         {camera.fx, 0, camera.cx},
         {0, camera.fy, camera.cy},
         {0, 0, 1}
     };
     
-    cout<<"solving pnp"<<endl;
     // 构建相机矩阵
-    cv::Mat cameraMatrix( 3, 3, CV_32F, camera_matrix_data );
+    cv::Mat cameraMatrix( 3, 3, CV_64F, camera_matrix_data );
     cv::Mat rvec, tvec, inliers;
     // 求解pnp
     cv::solvePnPRansac( pts_obj, pts_img, cameraMatrix, cv::Mat(), rvec, tvec, false, 100, 1.0, 0.99, inliers );
     
-    RESULT_OF_PNP result;
     result.rvec = rvec;
     result.tvec = tvec;
     result.inliers = inliers.rows;
@@ -135,3 +149,48 @@ RESULT_OF_PNP estimateMotion( FRAME& frame1, FRAME& frame2, CAMERA_INTRINSIC_PAR
     return result;
 }
 
+
+// cvMat2Eigen
+Eigen::Isometry3d cvMat2Eigen( cv::Mat& rvec, cv::Mat& tvec )
+{
+    cv::Mat R;
+    cv::Rodrigues( rvec, R );
+    Eigen::Matrix3d r;
+    for ( int i=0; i<3; i++ )
+        for ( int j=0; j<3; j++ )
+            r(i,j) = R.at<double>(i,j);
+    
+    // 将平移向量和旋转矩阵转换成变换矩阵
+    Eigen::Isometry3d T = Eigen::Isometry3d::Identity();
+    
+    Eigen::AngleAxisd angle(r);
+    T = angle;
+    T(0,3) = tvec.at<double>(0,0);
+    T(1,3) = tvec.at<double>(1,0);
+    T(2,3) = tvec.at<double>(2,0);
+    return T;
+}
+
+// joinPointCloud
+// 输入：原始点云，新来的帧以及它的位姿
+// 输出：将新来帧加到原始帧后的图像
+PointCloud::Ptr joinPointCloud( PointCloud::Ptr original, FRAME& newFrame, Eigen::Isometry3d T, CAMERA_INTRINSIC_PARAMETERS& camera )
+{
+    PointCloud::Ptr newCloud = image2PointCloud( newFrame.rgb, newFrame.depth, camera );
+    
+    // 合并点云
+    PointCloud::Ptr output (new PointCloud());
+    pcl::transformPointCloud( *original, *output, T.matrix() );
+    *newCloud += *output;
+    
+    // Voxel grid 滤波降采样
+    /*static pcl::VoxelGrid<PointT> voxel;
+    static ParameterReader pd;
+    double gridsize = atof( pd.getData("voxel_grid").c_str() );
+    voxel.setLeafSize( gridsize, gridsize, gridsize );
+    voxel.setInputCloud( newCloud );
+    PointCloud::Ptr tmp( new PointCloud() );
+    voxel.filter( *tmp );
+    return tmp;*/
+    return newCloud;
+}
